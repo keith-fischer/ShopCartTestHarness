@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>GreatCall.ShoppingCart.Contracts</id>
+    <version>1.0.0.23</version>
+    <title />
+    <authors>GreatCall Inc.</authors>
+    <owners>GreatCall Inc.</owners>
+    <iconUrl>http://www.greatcall.com/images/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Contracts for the Shopping Cart and its services</description>
+    <summary>Shopping Cart Service Contracts</summary>
+  </metadata>
+</package>

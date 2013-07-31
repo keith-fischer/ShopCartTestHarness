@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6384a860-e11f-4d67-91b0-8c37257255e8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CostGuard.xsd" MetadataType="Schema" ID="a69a6e74-5c12-4af9-a968-13d9165ba952" SourceId="1" SourceUrl="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd3" />
+    <MetadataFile FileName="CostGuard.wsdl" MetadataType="Wsdl" ID="cd0f7e7c-d5c8-46c4-9e7a-3626682e9e5a" SourceId="1" SourceUrl="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?wsdl" />
+    <MetadataFile FileName="CostGuard1.xsd" MetadataType="Schema" ID="16f3f8fc-365b-41fd-92da-3d85d0f45bf3" SourceId="1" SourceUrl="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd4" />
+    <MetadataFile FileName="CostGuard2.xsd" MetadataType="Schema" ID="1e8df345-be8b-4773-bf4c-d2ea2d4173a9" SourceId="1" SourceUrl="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd2" />
+    <MetadataFile FileName="CostGuard3.xsd" MetadataType="Schema" ID="3fdce395-e4aa-43ad-8962-b2380926e4f2" SourceId="1" SourceUrl="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd1" />
+    <MetadataFile FileName="CostGuard4.xsd" MetadataType="Schema" ID="7992ae06-b70d-4557-b60f-67127830febb" SourceId="1" SourceUrl="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd5" />
+    <MetadataFile FileName="CostGuard5.xsd" MetadataType="Schema" ID="fc90dc0e-d0f0-409b-8a08-4fb7ec586776" SourceId="1" SourceUrl="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GreatCall.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GreatCall.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RetailReservationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CatalogId" type="xs:int" />
+      <xs:element minOccurs="0" name="EquipmentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Min" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultRaw" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceCodeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetailReservationInfo" nillable="true" type="tns:RetailReservationInfo" />
+  <xs:simpleType name="Networks">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Accessible" />
+      <xs:enumeration value="Verizon" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Networks" nillable="true" type="tns:Networks" />
+  <xs:complexType name="ArrayOfCostGuardChangeReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CostGuardChangeReason" nillable="true" type="tns:CostGuardChangeReason" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCostGuardChangeReason" nillable="true" type="tns:ArrayOfCostGuardChangeReason" />
+  <xs:complexType name="CostGuardChangeReason">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeReasonId" type="xs:int" />
+      <xs:element minOccurs="0" name="ChangeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChangeTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CostGuardChangeReason" nillable="true" type="tns:CostGuardChangeReason" />
+</xs:schema>

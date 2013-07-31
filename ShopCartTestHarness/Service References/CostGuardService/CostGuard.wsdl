@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CostGuard" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ICostGuard_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" />
+      <xsd:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GreatCall.Common.Types" />
+      <xsd:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/GreatCall.Common" />
+      <xsd:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICostGuard_ValidateCardTypeAndNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCardTypeAndNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ValidateCardTypeAndNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCardTypeAndNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetBilledMinuteDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBilledMinuteDetails" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetBilledMinuteDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBilledMinuteDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetEpayAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEpayAccounts" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetEpayAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEpayAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetEpayTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEpayTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetEpayTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEpayTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetInvoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoice" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetInvoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetInvoiceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceList" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetInvoiceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvoiceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetNextBillingDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextBillingDate" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetNextBillingDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextBillingDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetSalesEntities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesEntities" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetSalesEntities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ServiceFeaturesGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceFeaturesGet" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ServiceFeaturesGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceFeaturesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetServiceFeatures_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceFeatures" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetServiceFeatures_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceFeaturesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetUnbilledMinuteDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnbilledMinuteDetails" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetUnbilledMinuteDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnbilledMinuteDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetUnbilledMinuteSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnbilledMinuteSummary" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetUnbilledMinuteSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnbilledMinuteSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetValueAddedServices_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueAddedServices" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetValueAddedServices_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueAddedServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetValueAddedServicesWithCustomerID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueAddedServicesWithCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetValueAddedServicesWithCustomerID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValueAddedServicesWithCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_JournalSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:JournalSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_JournalSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JournalSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_JournalSearchByJournalID_InputMessage">
+    <wsdl:part name="parameters" element="tns:JournalSearchByJournalID" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_JournalSearchByJournalID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:JournalSearchByJournalIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_LoadCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_LoadCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_NetworkCoverageCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkCoverageCheck" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_NetworkCoverageCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NetworkCoverageCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_PhoneBookRefresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:PhoneBookRefresh" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_PhoneBookRefresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PhoneBookRefreshResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_Ping_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_RegisterDeviceAsRetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterDeviceAsRetail" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_RegisterDeviceAsRetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterDeviceAsRetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_RemoveSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSubscription" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_RemoveSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_RetailReservationCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetailReservationCheck" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_RetailReservationCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetailReservationCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ServiceSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ServiceSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServiceSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SetBillingGroupIdIfPresent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetBillingGroupIdIfPresent" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SetBillingGroupIdIfPresent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetBillingGroupIdIfPresentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SetEpayAccountToAutoPay_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetEpayAccountToAutoPay" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SetEpayAccountToAutoPay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetEpayAccountToAutoPayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SetUpOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpOrder" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SetUpOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUpOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SubmitPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitPayment" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_SubmitPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_TenderOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:TenderOrder" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_TenderOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TenderOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_UnbilledUsageSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnbilledUsageSummary" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_UnbilledUsageSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnbilledUsageSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_UnbindContactFromMeid_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnbindContactFromMeid" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_UnbindContactFromMeid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnbindContactFromMeidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_UpdateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_UpdateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ValidateAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ValidateAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ActivateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateAccount" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ActivateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ActiveSubsBySKUWithVas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActiveSubsBySKUWithVas" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ActiveSubsBySKUWithVas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActiveSubsBySKUWithVasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContact" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddCustomerProspect_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerProspect" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddCustomerProspect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddEpayAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEpayAccount" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddEpayAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEpayAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddFollowUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFollowUp" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddFollowUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFollowUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddJournal_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJournal" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddJournal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJournalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubscription" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddLineOfService_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLineOfService" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddLineOfService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLineOfServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddValueAddedServiceAndRemoveOtherVAS_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddValueAddedServiceAndRemoveOtherVAS" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddValueAddedServiceAndRemoveOtherVAS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddValueAddedServiceAndRemoveOtherVASResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddValueAddedService_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddValueAddedService" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_AddValueAddedService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddValueAddedServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ContactSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ContactSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContactSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ConvertCustomerType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertCustomerType" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_ConvertCustomerType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertCustomerTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIHasAccountPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIHasAccountPassword" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIHasAccountPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIHasAccountPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIHasAuthorizedUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIHasAuthorizedUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIHasAuthorizedUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIHasAuthorizedUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIValidateAccountPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIValidateAccountPassword" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIValidateAccountPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIValidateAccountPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIValidateAuthorizedUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIValidateAuthorizedUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_CPNIValidateAuthorizedUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CPNIValidateAuthorizedUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DeActivateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeActivateAccount" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DeActivateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeActivateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DeviceSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DeviceSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeviceSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DisableEpayAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisableEpayAccount" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DisableEpayAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisableEpayAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DisconnectLineOfService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectLineOfService" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_DisconnectLineOfService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectLineOfServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_FixAllTelBadZip_InputMessage">
+    <wsdl:part name="parameters" element="tns:FixAllTelBadZip" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_FixAllTelBadZip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FixAllTelBadZipResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_FollowUpSearchByCustomerID_InputMessage">
+    <wsdl:part name="parameters" element="tns:FollowUpSearchByCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_FollowUpSearchByCustomerID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FollowUpSearchByCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_FollowUpSearchByJournalID_InputMessage">
+    <wsdl:part name="parameters" element="tns:FollowUpSearchByJournalID" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_FollowUpSearchByJournalID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FollowUpSearchByJournalIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAllProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProducts" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAllProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountBalanceBuckets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceBuckets" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountBalanceBuckets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceBucketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountBalanceOverdue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceOverdue" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountBalanceOverdue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceOverdueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountBalanceSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceSummary" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountBalanceSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountTransactions" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetAccountTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetChangeReasons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangeReasons" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetChangeReasons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangeReasonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetContactAssociatedWithDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactAssociatedWithDevice" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetContactAssociatedWithDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactAssociatedWithDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ICostGuard_GetCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICostGuard">
+    <wsdl:operation name="ValidateCardTypeAndNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ValidateCardTypeAndNumber" message="tns:ICostGuard_ValidateCardTypeAndNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ValidateCardTypeAndNumberResponse" message="tns:ICostGuard_ValidateCardTypeAndNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBilledMinuteDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetBilledMinuteDetails" message="tns:ICostGuard_GetBilledMinuteDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetBilledMinuteDetailsResponse" message="tns:ICostGuard_GetBilledMinuteDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEpayAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetEpayAccounts" message="tns:ICostGuard_GetEpayAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetEpayAccountsResponse" message="tns:ICostGuard_GetEpayAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEpayTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetEpayTransaction" message="tns:ICostGuard_GetEpayTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetEpayTransactionResponse" message="tns:ICostGuard_GetEpayTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetInvoice" message="tns:ICostGuard_GetInvoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetInvoiceResponse" message="tns:ICostGuard_GetInvoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetInvoiceList" message="tns:ICostGuard_GetInvoiceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetInvoiceListResponse" message="tns:ICostGuard_GetInvoiceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextBillingDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetNextBillingDate" message="tns:ICostGuard_GetNextBillingDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetNextBillingDateResponse" message="tns:ICostGuard_GetNextBillingDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesEntities">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetSalesEntities" message="tns:ICostGuard_GetSalesEntities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetSalesEntitiesResponse" message="tns:ICostGuard_GetSalesEntities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceFeaturesGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ServiceFeaturesGet" message="tns:ICostGuard_ServiceFeaturesGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ServiceFeaturesGetResponse" message="tns:ICostGuard_ServiceFeaturesGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceFeatures">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetServiceFeatures" message="tns:ICostGuard_GetServiceFeatures_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetServiceFeaturesResponse" message="tns:ICostGuard_GetServiceFeatures_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnbilledMinuteDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetUnbilledMinuteDetails" message="tns:ICostGuard_GetUnbilledMinuteDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetUnbilledMinuteDetailsResponse" message="tns:ICostGuard_GetUnbilledMinuteDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnbilledMinuteSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetUnbilledMinuteSummary" message="tns:ICostGuard_GetUnbilledMinuteSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetUnbilledMinuteSummaryResponse" message="tns:ICostGuard_GetUnbilledMinuteSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueAddedServices">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetValueAddedServices" message="tns:ICostGuard_GetValueAddedServices_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetValueAddedServicesResponse" message="tns:ICostGuard_GetValueAddedServices_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueAddedServicesWithCustomerID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetValueAddedServicesWithCustomerID" message="tns:ICostGuard_GetValueAddedServicesWithCustomerID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetValueAddedServicesWithCustomerIDResponse" message="tns:ICostGuard_GetValueAddedServicesWithCustomerID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JournalSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/JournalSearch" message="tns:ICostGuard_JournalSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/JournalSearchResponse" message="tns:ICostGuard_JournalSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="JournalSearchByJournalID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/JournalSearchByJournalID" message="tns:ICostGuard_JournalSearchByJournalID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/JournalSearchByJournalIDResponse" message="tns:ICostGuard_JournalSearchByJournalID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/LoadCustomer" message="tns:ICostGuard_LoadCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/LoadCustomerResponse" message="tns:ICostGuard_LoadCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NetworkCoverageCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/NetworkCoverageCheck" message="tns:ICostGuard_NetworkCoverageCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/NetworkCoverageCheckResponse" message="tns:ICostGuard_NetworkCoverageCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PhoneBookRefresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/PhoneBookRefresh" message="tns:ICostGuard_PhoneBookRefresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/PhoneBookRefreshResponse" message="tns:ICostGuard_PhoneBookRefresh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/Ping" message="tns:ICostGuard_Ping_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/PingResponse" message="tns:ICostGuard_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterDeviceAsRetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/RegisterDeviceAsRetail" message="tns:ICostGuard_RegisterDeviceAsRetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/RegisterDeviceAsRetailResponse" message="tns:ICostGuard_RegisterDeviceAsRetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/RemoveSubscription" message="tns:ICostGuard_RemoveSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/RemoveSubscriptionResponse" message="tns:ICostGuard_RemoveSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailReservationCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/RetailReservationCheck" message="tns:ICostGuard_RetailReservationCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/RetailReservationCheckResponse" message="tns:ICostGuard_RetailReservationCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ServiceSearch" message="tns:ICostGuard_ServiceSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ServiceSearchResponse" message="tns:ICostGuard_ServiceSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetBillingGroupIdIfPresent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/SetBillingGroupIdIfPresent" message="tns:ICostGuard_SetBillingGroupIdIfPresent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/SetBillingGroupIdIfPresentResponse" message="tns:ICostGuard_SetBillingGroupIdIfPresent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetEpayAccountToAutoPay">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/SetEpayAccountToAutoPay" message="tns:ICostGuard_SetEpayAccountToAutoPay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/SetEpayAccountToAutoPayResponse" message="tns:ICostGuard_SetEpayAccountToAutoPay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUpOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/SetUpOrder" message="tns:ICostGuard_SetUpOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/SetUpOrderResponse" message="tns:ICostGuard_SetUpOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/SubmitPayment" message="tns:ICostGuard_SubmitPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/SubmitPaymentResponse" message="tns:ICostGuard_SubmitPayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TenderOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/TenderOrder" message="tns:ICostGuard_TenderOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/TenderOrderResponse" message="tns:ICostGuard_TenderOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnbilledUsageSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/UnbilledUsageSummary" message="tns:ICostGuard_UnbilledUsageSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/UnbilledUsageSummaryResponse" message="tns:ICostGuard_UnbilledUsageSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnbindContactFromMeid">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/UnbindContactFromMeid" message="tns:ICostGuard_UnbindContactFromMeid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/UnbindContactFromMeidResponse" message="tns:ICostGuard_UnbindContactFromMeid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/UpdateCustomer" message="tns:ICostGuard_UpdateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/UpdateCustomerResponse" message="tns:ICostGuard_UpdateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ValidateAddress" message="tns:ICostGuard_ValidateAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ValidateAddressResponse" message="tns:ICostGuard_ValidateAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ActivateAccount" message="tns:ICostGuard_ActivateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ActivateAccountResponse" message="tns:ICostGuard_ActivateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActiveSubsBySKUWithVas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ActiveSubsBySKUWithVas" message="tns:ICostGuard_ActiveSubsBySKUWithVas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ActiveSubsBySKUWithVasResponse" message="tns:ICostGuard_ActiveSubsBySKUWithVas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddContact" message="tns:ICostGuard_AddContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddContactResponse" message="tns:ICostGuard_AddContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerProspect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddCustomerProspect" message="tns:ICostGuard_AddCustomerProspect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddCustomerProspectResponse" message="tns:ICostGuard_AddCustomerProspect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEpayAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddEpayAccount" message="tns:ICostGuard_AddEpayAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddEpayAccountResponse" message="tns:ICostGuard_AddEpayAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFollowUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddFollowUp" message="tns:ICostGuard_AddFollowUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddFollowUpResponse" message="tns:ICostGuard_AddFollowUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJournal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddJournal" message="tns:ICostGuard_AddJournal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddJournalResponse" message="tns:ICostGuard_AddJournal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddSubscription" message="tns:ICostGuard_AddSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddSubscriptionResponse" message="tns:ICostGuard_AddSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLineOfService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddLineOfService" message="tns:ICostGuard_AddLineOfService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddLineOfServiceResponse" message="tns:ICostGuard_AddLineOfService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddValueAddedServiceAndRemoveOtherVAS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddValueAddedServiceAndRemoveOtherVAS" message="tns:ICostGuard_AddValueAddedServiceAndRemoveOtherVAS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddValueAddedServiceAndRemoveOtherVASResponse" message="tns:ICostGuard_AddValueAddedServiceAndRemoveOtherVAS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddValueAddedService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/AddValueAddedService" message="tns:ICostGuard_AddValueAddedService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/AddValueAddedServiceResponse" message="tns:ICostGuard_AddValueAddedService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ContactSearch" message="tns:ICostGuard_ContactSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ContactSearchResponse" message="tns:ICostGuard_ContactSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertCustomerType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/ConvertCustomerType" message="tns:ICostGuard_ConvertCustomerType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/ConvertCustomerTypeResponse" message="tns:ICostGuard_ConvertCustomerType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CPNIHasAccountPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/CPNIHasAccountPassword" message="tns:ICostGuard_CPNIHasAccountPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/CPNIHasAccountPasswordResponse" message="tns:ICostGuard_CPNIHasAccountPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CPNIHasAuthorizedUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/CPNIHasAuthorizedUserPassword" message="tns:ICostGuard_CPNIHasAuthorizedUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/CPNIHasAuthorizedUserPasswordResponse" message="tns:ICostGuard_CPNIHasAuthorizedUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CPNIValidateAccountPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/CPNIValidateAccountPassword" message="tns:ICostGuard_CPNIValidateAccountPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/CPNIValidateAccountPasswordResponse" message="tns:ICostGuard_CPNIValidateAccountPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CPNIValidateAuthorizedUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/CPNIValidateAuthorizedUserPassword" message="tns:ICostGuard_CPNIValidateAuthorizedUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/CPNIValidateAuthorizedUserPasswordResponse" message="tns:ICostGuard_CPNIValidateAuthorizedUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeActivateAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/DeActivateAccount" message="tns:ICostGuard_DeActivateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/DeActivateAccountResponse" message="tns:ICostGuard_DeActivateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeviceSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/DeviceSearch" message="tns:ICostGuard_DeviceSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/DeviceSearchResponse" message="tns:ICostGuard_DeviceSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableEpayAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/DisableEpayAccount" message="tns:ICostGuard_DisableEpayAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/DisableEpayAccountResponse" message="tns:ICostGuard_DisableEpayAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectLineOfService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/DisconnectLineOfService" message="tns:ICostGuard_DisconnectLineOfService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/DisconnectLineOfServiceResponse" message="tns:ICostGuard_DisconnectLineOfService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FixAllTelBadZip">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/FixAllTelBadZip" message="tns:ICostGuard_FixAllTelBadZip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/FixAllTelBadZipResponse" message="tns:ICostGuard_FixAllTelBadZip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FollowUpSearchByCustomerID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/FollowUpSearchByCustomerID" message="tns:ICostGuard_FollowUpSearchByCustomerID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/FollowUpSearchByCustomerIDResponse" message="tns:ICostGuard_FollowUpSearchByCustomerID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FollowUpSearchByJournalID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/FollowUpSearchByJournalID" message="tns:ICostGuard_FollowUpSearchByJournalID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/FollowUpSearchByJournalIDResponse" message="tns:ICostGuard_FollowUpSearchByJournalID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetAllProducts" message="tns:ICostGuard_GetAllProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetAllProductsResponse" message="tns:ICostGuard_GetAllProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalanceBuckets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetAccountBalanceBuckets" message="tns:ICostGuard_GetAccountBalanceBuckets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetAccountBalanceBucketsResponse" message="tns:ICostGuard_GetAccountBalanceBuckets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalanceOverdue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetAccountBalanceOverdue" message="tns:ICostGuard_GetAccountBalanceOverdue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetAccountBalanceOverdueResponse" message="tns:ICostGuard_GetAccountBalanceOverdue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalanceSummary">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetAccountBalanceSummary" message="tns:ICostGuard_GetAccountBalanceSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetAccountBalanceSummaryResponse" message="tns:ICostGuard_GetAccountBalanceSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetAccountTransactions" message="tns:ICostGuard_GetAccountTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetAccountTransactionsResponse" message="tns:ICostGuard_GetAccountTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChangeReasons">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetChangeReasons" message="tns:ICostGuard_GetChangeReasons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetChangeReasonsResponse" message="tns:ICostGuard_GetChangeReasons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactAssociatedWithDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetContactAssociatedWithDevice" message="tns:ICostGuard_GetContactAssociatedWithDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetContactAssociatedWithDeviceResponse" message="tns:ICostGuard_GetContactAssociatedWithDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICostGuard/GetCustomer" message="tns:ICostGuard_GetCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICostGuard/GetCustomerResponse" message="tns:ICostGuard_GetCustomer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ICostGuard" type="tns:ICostGuard">
+    <wsp:PolicyReference URI="#WSHttpBinding_ICostGuard_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidateCardTypeAndNumber">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ValidateCardTypeAndNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBilledMinuteDetails">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetBilledMinuteDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEpayAccounts">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetEpayAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEpayTransaction">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetEpayTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetInvoice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoiceList">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetInvoiceList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextBillingDate">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetNextBillingDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesEntities">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetSalesEntities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceFeaturesGet">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ServiceFeaturesGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceFeatures">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetServiceFeatures" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnbilledMinuteDetails">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetUnbilledMinuteDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnbilledMinuteSummary">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetUnbilledMinuteSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueAddedServices">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetValueAddedServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueAddedServicesWithCustomerID">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetValueAddedServicesWithCustomerID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JournalSearch">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/JournalSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JournalSearchByJournalID">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/JournalSearchByJournalID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadCustomer">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/LoadCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NetworkCoverageCheck">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/NetworkCoverageCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PhoneBookRefresh">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/PhoneBookRefresh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterDeviceAsRetail">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/RegisterDeviceAsRetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSubscription">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/RemoveSubscription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailReservationCheck">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/RetailReservationCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSearch">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ServiceSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetBillingGroupIdIfPresent">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/SetBillingGroupIdIfPresent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetEpayAccountToAutoPay">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/SetEpayAccountToAutoPay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUpOrder">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/SetUpOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitPayment">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/SubmitPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TenderOrder">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/TenderOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnbilledUsageSummary">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/UnbilledUsageSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnbindContactFromMeid">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/UnbindContactFromMeid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCustomer">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/UpdateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddress">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ValidateAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateAccount">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ActivateAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActiveSubsBySKUWithVas">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ActiveSubsBySKUWithVas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerProspect">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddCustomerProspect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEpayAccount">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddEpayAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFollowUp">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddFollowUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddJournal">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddJournal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubscription">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddSubscription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLineOfService">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddLineOfService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddValueAddedServiceAndRemoveOtherVAS">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddValueAddedServiceAndRemoveOtherVAS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddValueAddedService">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/AddValueAddedService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactSearch">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ContactSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertCustomerType">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/ConvertCustomerType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CPNIHasAccountPassword">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/CPNIHasAccountPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CPNIHasAuthorizedUserPassword">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/CPNIHasAuthorizedUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CPNIValidateAccountPassword">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/CPNIValidateAccountPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CPNIValidateAuthorizedUserPassword">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/CPNIValidateAuthorizedUserPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeActivateAccount">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/DeActivateAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeviceSearch">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/DeviceSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableEpayAccount">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/DisableEpayAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectLineOfService">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/DisconnectLineOfService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FixAllTelBadZip">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/FixAllTelBadZip" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FollowUpSearchByCustomerID">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/FollowUpSearchByCustomerID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FollowUpSearchByJournalID">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/FollowUpSearchByJournalID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducts">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetAllProducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalanceBuckets">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetAccountBalanceBuckets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalanceOverdue">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetAccountBalanceOverdue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalanceSummary">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetAccountBalanceSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetAccountTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangeReasons">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetChangeReasons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactAssociatedWithDevice">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetContactAssociatedWithDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap12:operation soapAction="http://tempuri.org/ICostGuard/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CostGuard">
+    <wsdl:port name="WSHttpBinding_ICostGuard" binding="tns:WSHttpBinding_ICostGuard">
+      <soap12:address location="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

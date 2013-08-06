@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CartService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ICartService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" />
+      <xsd:import schemaLocation="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICartService_CreateCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCart" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_CreateCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCart" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetCart_CartNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q1:CartNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCart" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCart_ProductNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q2:ProductNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCart_CartNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q3:CartNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCart_ProductNotFoundInCartFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q4:ProductNotFoundInCartFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCartWithCartUpdateRequestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCartWithCartUpdateRequestList" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCartWithCartUpdateRequestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCartWithCartUpdateRequestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCartWithCartUpdateRequestList_CartNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q5:CartNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCartWithCartUpdateRequestList_ProductNotFoundInCartFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q6:ProductNotFoundInCartFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_UpdateCartWithCartUpdateRequestList_ProductNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q7:ProductNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_SaveCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCart" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_SaveCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_SaveCart_CartNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q8:CartNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProductForCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductForCart" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProductForCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductForCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProductForCart_ProductNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q9:ProductNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProduct_ProductNotFoundFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" name="detail" element="q10:ProductNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetOrderedProductsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderedProductsByID" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetOrderedProductsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderedProductsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProductsByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsByType" />
+  </wsdl:message>
+  <wsdl:message name="ICartService_GetProductsByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsByTypeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICartService">
+    <wsdl:operation name="CreateCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/CreateCart" message="tns:ICartService_CreateCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/CreateCartResponse" message="tns:ICartService_CreateCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/GetCart" message="tns:ICartService_GetCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/GetCartResponse" message="tns:ICartService_GetCart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/GetCartCartNotFoundFaultFault" name="CartNotFoundFaultFault" message="tns:ICartService_GetCart_CartNotFoundFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/UpdateCart" message="tns:ICartService_UpdateCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/UpdateCartResponse" message="tns:ICartService_UpdateCart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/UpdateCartProductNotFoundFaultFault" name="ProductNotFoundFaultFault" message="tns:ICartService_UpdateCart_ProductNotFoundFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/UpdateCartCartNotFoundFaultFault" name="CartNotFoundFaultFault" message="tns:ICartService_UpdateCart_CartNotFoundFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/UpdateCartProductNotFoundInCartFaultFault" name="ProductNotFoundInCartFaultFault" message="tns:ICartService_UpdateCart_ProductNotFoundInCartFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartWithCartUpdateRequestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/UpdateCartWithCartUpdateRequestList" message="tns:ICartService_UpdateCartWithCartUpdateRequestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/UpdateCartWithCartUpdateRequestListResponse" message="tns:ICartService_UpdateCartWithCartUpdateRequestList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/UpdateCartWithCartUpdateRequestListCartNotFoundFaultFault" name="CartNotFoundFaultFault" message="tns:ICartService_UpdateCartWithCartUpdateRequestList_CartNotFoundFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/UpdateCartWithCartUpdateRequestListProductNotFoundInCartFaultFault" name="ProductNotFoundInCartFaultFault" message="tns:ICartService_UpdateCartWithCartUpdateRequestList_ProductNotFoundInCartFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/UpdateCartWithCartUpdateRequestListProductNotFoundFaultFault" name="ProductNotFoundFaultFault" message="tns:ICartService_UpdateCartWithCartUpdateRequestList_ProductNotFoundFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/SaveCart" message="tns:ICartService_SaveCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/SaveCartResponse" message="tns:ICartService_SaveCart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/SaveCartCartNotFoundFaultFault" name="CartNotFoundFaultFault" message="tns:ICartService_SaveCart_CartNotFoundFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductForCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/GetProductForCart" message="tns:ICartService_GetProductForCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/GetProductForCartResponse" message="tns:ICartService_GetProductForCart_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/GetProductForCartProductNotFoundFaultFault" name="ProductNotFoundFaultFault" message="tns:ICartService_GetProductForCart_ProductNotFoundFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/GetProduct" message="tns:ICartService_GetProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/GetProductResponse" message="tns:ICartService_GetProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICartService/GetProductProductNotFoundFaultFault" name="ProductNotFoundFaultFault" message="tns:ICartService_GetProduct_ProductNotFoundFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderedProductsByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/GetOrderedProductsByID" message="tns:ICartService_GetOrderedProductsByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/GetOrderedProductsByIDResponse" message="tns:ICartService_GetOrderedProductsByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICartService/GetProductsByType" message="tns:ICartService_GetProductsByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICartService/GetProductsByTypeResponse" message="tns:ICartService_GetProductsByType_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ICartService" type="tns:ICartService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ICartService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateCart">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/CreateCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCart">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/GetCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CartNotFoundFaultFault">
+        <soap12:fault use="literal" name="CartNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCart">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/UpdateCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ProductNotFoundFaultFault">
+        <soap12:fault use="literal" name="ProductNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="CartNotFoundFaultFault">
+        <soap12:fault use="literal" name="CartNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ProductNotFoundInCartFaultFault">
+        <soap12:fault use="literal" name="ProductNotFoundInCartFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartWithCartUpdateRequestList">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/UpdateCartWithCartUpdateRequestList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CartNotFoundFaultFault">
+        <soap12:fault use="literal" name="CartNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ProductNotFoundInCartFaultFault">
+        <soap12:fault use="literal" name="ProductNotFoundInCartFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ProductNotFoundFaultFault">
+        <soap12:fault use="literal" name="ProductNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCart">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/SaveCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CartNotFoundFaultFault">
+        <soap12:fault use="literal" name="CartNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductForCart">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/GetProductForCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ProductNotFoundFaultFault">
+        <soap12:fault use="literal" name="ProductNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/GetProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ProductNotFoundFaultFault">
+        <soap12:fault use="literal" name="ProductNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderedProductsByID">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/GetOrderedProductsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByType">
+      <soap12:operation soapAction="http://tempuri.org/ICartService/GetProductsByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CartService">
+    <wsdl:port name="WSHttpBinding_ICartService" binding="tns:WSHttpBinding_ICartService">
+      <soap12:address location="http://gcdmdevtest01:8008/CartService/CartService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://gcdmdevtest01:8008/CartService/CartService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

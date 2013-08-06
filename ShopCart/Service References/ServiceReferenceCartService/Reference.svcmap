@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e0e7f01-fb80-4442-9972-eed011fa117a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://gcdmdevtest01:8008/CartService/CartService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CartService.wsdl" MetadataType="Wsdl" ID="c84fab9a-9baa-442b-971a-cb37fb5df488" SourceId="1" SourceUrl="http://gcdmdevtest01:8008/CartService/CartService.svc?wsdl" />
+    <MetadataFile FileName="CartService.xsd" MetadataType="Schema" ID="f47515e1-dcd6-42b8-851d-74db286279d6" SourceId="1" SourceUrl="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CartService.disco" MetadataType="Disco" ID="64a12ad4-05e1-4d5b-af8c-81e79287a5f6" SourceId="1" SourceUrl="http://gcdmdevtest01:8008/CartService/CartService.svc?disco" />
+    <MetadataFile FileName="CartService1.xsd" MetadataType="Schema" ID="ccc9db11-651c-4e68-a5cb-ad6ec84f067d" SourceId="1" SourceUrl="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CartService2.xsd" MetadataType="Schema" ID="532a6a33-2198-49ac-a312-53849c84d441" SourceId="1" SourceUrl="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CartService3.xsd" MetadataType="Schema" ID="f18e2043-263c-49db-9311-5827b6e07860" SourceId="1" SourceUrl="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

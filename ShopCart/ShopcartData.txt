@@ -1,0 +1,155 @@
+﻿ProductId	Name	Description	ProductTypeId	Active	Visible	Removable	ShortName	Sku	IsDefault	InvalidProductId	InvalidSku	ReplacementProductId	ReplacementSku	ProdType	CanOnlyHaveOneProductPerType	MaxQuantityPerProduct
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	100Data	GC308A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	10CentText	GC320A-02	10CentText	SIMTXT10CENTS2	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	10Data	GC311A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	1250Text	GC315A-02	1250Text	GC303A-02	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	2500Text	GC316A-02	2500Text	GC305A-02	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	250Data	GC309A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	300Text	GC313A-02	300Text	GC304A-02	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	500Data	GC310A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	50Data	GC307A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	700Text	GC314A-02	700Text	GC302A-02	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	HandsetReplacement	GC317A-02	HandsetReplacement	JHRO	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	R100Case	R100-HORIZ-CASE-00	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	UnlimitedText	GC318A-02	UnlimitedText	SIMTXTFREE2	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	VoiceMail	GC312A-02	VoiceMail	GC306A-02	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	VoiceMail	VM12	VoiceMail	VMM2	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	VoiceMail	VMMR1002	VoiceMail	VMM2	Device	TRUE	NULL
+JitterbugPlusRed	Jitterbug Plus Red	Jitterbug Plus Red	1	TRUE	TRUE	TRUE	Jitterbug Plus Red	GC001A-W-RUBY	TRUE	VoiceMail	VMSR1002	VoiceMail	VMS2	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	100Data	GC308A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	10CentText	GC320A-02	10CentText	SIMTXT10CENTS2	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	10Data	GC311A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	1250Text	GC315A-02	1250Text	GC303A-02	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	2500Text	GC316A-02	2500Text	GC305A-02	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	250Data	GC309A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	300Text	GC313A-02	300Text	GC304A-02	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	500Data	GC310A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	50Data	GC307A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	700Text	GC314A-02	700Text	GC302A-02	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	HandsetReplacement	GC317A-02	HandsetReplacement	JHRO	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	R100Case	R100-HORIZ-CASE-00	NULL	NULL	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	UnlimitedText	GC318A-02	UnlimitedText	SIMTXTFREE2	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	VoiceMail	GC312A-02	VoiceMail	GC306A-02	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	VoiceMail	VM12	VoiceMail	VMM2	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	VoiceMail	VMMR1002	VoiceMail	VMM2	Device	TRUE	NULL
+JitterbugPlusSilver	Jitterbug Plus Silver	Jitterbug Plus Silver	1	TRUE	TRUE	TRUE	Jitterbug Plus Silver	GC001A-W-PLTNM	TRUE	VoiceMail	VMSR1002	VoiceMail	VMS2	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	10CentText	SIMTXT10CENTS2	10CentText	GC320A-02	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	1250Text	GC303A-02	1250Text	GC315A-02	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	2500Text	GC305A-02	2500Text	GC316A-02	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	300Text	GC304A-02	300Text	GC313A-02	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	700Text	GC302A-02	700Text	GC314A-02	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	BrainGames	GC318Z-02	NULL	NULL	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	HandsetReplacement	JHRO	HandsetReplacement	GC317A-02	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	MyCalendar	MYCAL2	NULL	NULL	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	MyPhotos	GC300A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	MyPhotos	GC300Z-02	NULL	NULL	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	UnlimitedText	SIMTXTFREE2	UnlimitedText	GC318A-02	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	VoiceMail	GC306A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	VoiceMail	GC312A-02	NULL	NULL	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	VoiceMail	VMM2	VoiceMail	VM12	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	VoiceMail	VMMR1002	VoiceMail	VM12	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	VoiceMail	VMS2	VoiceMail	VM12	Device	TRUE	NULL
+JitterbugTouch	Jitterbug Touch	Jitterbug Touch	1	TRUE	TRUE	TRUE	Jitterbug Touch	GC002A-W-BLCK	TRUE	VoiceMail	VMSR1002	VoiceMail	VM12	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	100Data	GC308A-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	10CentText	GC320A-02	10CentText	SIMTXT10CENTS2	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	10Data	GC311A-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	1250Text	GC315A-02	1250Text	GC303A-02	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	2500Text	GC316A-02	2500Text	GC305A-02	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	250Data	GC309A-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	300Text	GC313A-02	300Text	GC304A-02	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	500Data	GC310A-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	50Data	GC307A-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	5StarApp	5STAR02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	5StarApp	5STAR2	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	700Text	GC314A-02	700Text	GC302A-02	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	BrainGames	GC318Z-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	HandsetReplacement	GC317A-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	HandsetReplacement	JHRO	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	MyCalendar	MYCAL2	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	MyPhotos	GC300A-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	MyPhotos	GC300Z-02	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	MyWorld	MYWORLD2	NULL	NULL	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	UnlimitedText	GC318A-02	UnlimitedText	SIMTXTFREE2	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	VoiceMail	GC306A-02	VoiceMail	GC312A-02	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	VoiceMail	VM12	VoiceMail	VMMR1002	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	VoiceMail	VMM2	VoiceMail	VMMR1002	Device	TRUE	NULL
+R100	Samsung SCH-r100	Samsung SCH-r100	1	TRUE	TRUE	TRUE	Samsung SCH-r100	R100-49-W	TRUE	VoiceMail	VMS2	VoiceMail	VMSR1002	Device	TRUE	NULL
+AcquireServiceNumber	Acquire Service Number	Acquire Service Number	6	TRUE	FALSE	FALSE	Acquire Service Number	MDN2	TRUE	InternationalCalling	INTERNATNL	InternationalCalling	INTERNATNL2	Fee	FALSE	NULL
+AcquireServiceNumber	Acquire Service Number	Acquire Service Number	6	TRUE	FALSE	FALSE	Acquire Service Number	MDN2	TRUE	VoiceMail	VMM	VoiceMail	VMM2	Fee	FALSE	NULL
+AcquireServiceNumber	Acquire Service Number	Acquire Service Number	6	TRUE	FALSE	FALSE	Acquire Service Number	MDN2	TRUE	VoiceMail	VMS	VoiceMail	VMS2	Fee	FALSE	NULL
+Basic14	Basic 14	Basic 14 - Monthly	2	TRUE	TRUE	TRUE	50	GC504A	TRUE	5StarApp	5STAR02	NULL	NULL	Plan	TRUE	NULL
+Basic14	Basic 14	Basic 14 - Monthly	2	TRUE	TRUE	TRUE	50	GC504A	TRUE	CheckInCall	CHECKINCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic14	Basic 14	Basic 14 - Monthly	2	TRUE	TRUE	TRUE	50	GC504A	TRUE	MyPhotos	GC300Z-02	MyPhotos	GC300A-02	Plan	TRUE	NULL
+Basic14	Basic 14	Basic 14 - Monthly	2	TRUE	TRUE	TRUE	50	GC504A	TRUE	UnlimitedText	GC318A-02	NULL	NULL	Plan	TRUE	NULL
+Basic14	Basic 14	Basic 14 - Monthly	2	TRUE	TRUE	TRUE	50	GC504A	TRUE	UnlimitedText	SIMTXTFREE2	NULL	NULL	Plan	TRUE	NULL
+Basic14	Basic 14	Basic 14 - Monthly	2	TRUE	TRUE	TRUE	50	GC504A	TRUE	VoiceMail	VMSR1002	NULL	NULL	Plan	TRUE	NULL
+Basic14	Basic 14	Basic 14 - Monthly	2	TRUE	TRUE	TRUE	50	GC504A	TRUE	WellnessCall	WELLNESSCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic19	Basic 19	Basic 19 - Monthly	2	TRUE	TRUE	TRUE	200	GC505A	TRUE	5StarApp	5STAR02	NULL	NULL	Plan	TRUE	NULL
+Basic19	Basic 19	Basic 19 - Monthly	2	TRUE	TRUE	TRUE	200	GC505A	TRUE	CheckInCall	CHECKINCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic19	Basic 19	Basic 19 - Monthly	2	TRUE	TRUE	TRUE	200	GC505A	TRUE	MyPhotos	GC300Z-02	MyPhotos	GC300A-02	Plan	TRUE	NULL
+Basic19	Basic 19	Basic 19 - Monthly	2	TRUE	TRUE	TRUE	200	GC505A	TRUE	UnlimitedText	GC318A-02	NULL	NULL	Plan	TRUE	NULL
+Basic19	Basic 19	Basic 19 - Monthly	2	TRUE	TRUE	TRUE	200	GC505A	TRUE	UnlimitedText	SIMTXTFREE2	NULL	NULL	Plan	TRUE	NULL
+Basic19	Basic 19	Basic 19 - Monthly	2	TRUE	TRUE	TRUE	200	GC505A	TRUE	VoiceMail	VMSR1002	NULL	NULL	Plan	TRUE	NULL
+Basic19	Basic 19	Basic 19 - Monthly	2	TRUE	TRUE	TRUE	200	GC505A	TRUE	WellnessCall	WELLNESSCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic29	Basic 29	Basic 29 - Monthly	2	TRUE	TRUE	TRUE	700	GC506A	TRUE	5StarApp	5STAR02	NULL	NULL	Plan	TRUE	NULL
+Basic29	Basic 29	Basic 29 - Monthly	2	TRUE	TRUE	TRUE	700	GC506A	TRUE	CheckInCall	CHECKINCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic29	Basic 29	Basic 29 - Monthly	2	TRUE	TRUE	TRUE	700	GC506A	TRUE	MyPhotos	GC300Z-02	MyPhotos	GC300A-02	Plan	TRUE	NULL
+Basic29	Basic 29	Basic 29 - Monthly	2	TRUE	TRUE	TRUE	700	GC506A	TRUE	UnlimitedText	GC318A-02	NULL	NULL	Plan	TRUE	NULL
+Basic29	Basic 29	Basic 29 - Monthly	2	TRUE	TRUE	TRUE	700	GC506A	TRUE	UnlimitedText	SIMTXTFREE2	NULL	NULL	Plan	TRUE	NULL
+Basic29	Basic 29	Basic 29 - Monthly	2	TRUE	TRUE	TRUE	700	GC506A	TRUE	VoiceMail	VMSR1002	NULL	NULL	Plan	TRUE	NULL
+Basic29	Basic 29	Basic 29 - Monthly	2	TRUE	TRUE	TRUE	700	GC506A	TRUE	WellnessCall	WELLNESSCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic39	Basic 39	Basic 39 - Monthly	2	TRUE	TRUE	TRUE	1500	GC507A	TRUE	5StarApp	5STAR02	NULL	NULL	Plan	TRUE	NULL
+Basic39	Basic 39	Basic 39 - Monthly	2	TRUE	TRUE	TRUE	1500	GC507A	TRUE	CheckInCall	CHECKINCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic39	Basic 39	Basic 39 - Monthly	2	TRUE	TRUE	TRUE	1500	GC507A	TRUE	MyPhotos	GC300Z-02	MyPhotos	GC300A-02	Plan	TRUE	NULL
+Basic39	Basic 39	Basic 39 - Monthly	2	TRUE	TRUE	TRUE	1500	GC507A	TRUE	UnlimitedText	GC318A-02	NULL	NULL	Plan	TRUE	NULL
+Basic39	Basic 39	Basic 39 - Monthly	2	TRUE	TRUE	TRUE	1500	GC507A	TRUE	UnlimitedText	SIMTXTFREE2	NULL	NULL	Plan	TRUE	NULL
+Basic39	Basic 39	Basic 39 - Monthly	2	TRUE	TRUE	TRUE	1500	GC507A	TRUE	VoiceMail	VMSR1002	NULL	NULL	Plan	TRUE	NULL
+Basic39	Basic 39	Basic 39 - Monthly	2	TRUE	TRUE	TRUE	1500	GC507A	TRUE	WellnessCall	WELLNESSCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic59	Basic 59	Basic 59 - Monthly	2	TRUE	TRUE	TRUE	2500	GC508A	TRUE	5StarApp	5STAR02	NULL	NULL	Plan	TRUE	NULL
+Basic59	Basic 59	Basic 59 - Monthly	2	TRUE	TRUE	TRUE	2500	GC508A	TRUE	CheckInCall	CHECKINCALL0	NULL	NULL	Plan	TRUE	NULL
+Basic59	Basic 59	Basic 59 - Monthly	2	TRUE	TRUE	TRUE	2500	GC508A	TRUE	MyPhotos	GC300Z-02	MyPhotos	GC300A-02	Plan	TRUE	NULL
+Basic59	Basic 59	Basic 59 - Monthly	2	TRUE	TRUE	TRUE	2500	GC508A	TRUE	UnlimitedText	GC318A-02	NULL	NULL	Plan	TRUE	NULL
+Basic59	Basic 59	Basic 59 - Monthly	2	TRUE	TRUE	TRUE	2500	GC508A	TRUE	UnlimitedText	SIMTXTFREE2	NULL	NULL	Plan	TRUE	NULL
+Basic59	Basic 59	Basic 59 - Monthly	2	TRUE	TRUE	TRUE	2500	GC508A	TRUE	VoiceMail	VMSR1002	NULL	NULL	Plan	TRUE	NULL
+Basic59	Basic 59	Basic 59 - Monthly	2	TRUE	TRUE	TRUE	2500	GC508A	TRUE	WellnessCall	WELLNESSCALL0	NULL	NULL	Plan	TRUE	NULL
+ShareSubAccount	Shared Plan	Shared Plan - Monthly	2	TRUE	TRUE	TRUE	Shared Plan	SIMPSHSUB	TRUE	CheckInCall	CHECKINCALL0	NULL	NULL	Plan	TRUE	NULL
+ShareSubAccount	Shared Plan	Shared Plan - Monthly	2	TRUE	TRUE	TRUE	Shared Plan	SIMPSHSUB	TRUE	UnlimitedText	SIMTXTFREE2	NULL	NULL	Plan	TRUE	NULL
+ShareSubAccount	Shared Plan	Shared Plan - Monthly	2	TRUE	TRUE	TRUE	Shared Plan	SIMPSHSUB	TRUE	UrgentCare	JLNZ	NULL	NULL	Plan	TRUE	NULL
+ShareSubAccount	Shared Plan	Shared Plan - Monthly	2	TRUE	TRUE	TRUE	Shared Plan	SIMPSHSUB	TRUE	VoiceMail	VMSR1002	NULL	NULL	Plan	TRUE	NULL
+ShareSubAccount	Shared Plan	Shared Plan - Monthly	2	TRUE	TRUE	TRUE	Shared Plan	SIMPSHSUB	TRUE	WellnessCall	WELLNESSCALL0	NULL	NULL	Plan	TRUE	NULL
+1250Text	1250 Text Messages	1250 Text Messages	8	TRUE	TRUE	TRUE	1250	GC303A-02	TRUE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+1250Text	1250 Text Messages	1250 Text Messages	8	TRUE	TRUE	TRUE	1250	GC303A-02	TRUE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+1250Text	1250 Text Messages	1250 Text Messages	8	TRUE	TRUE	TRUE	1250	GC315A-02	FALSE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+1250Text	1250 Text Messages	1250 Text Messages	8	TRUE	TRUE	TRUE	1250	GC315A-02	FALSE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+2500Text	2500 Text Messages	2500 Text Messages	8	TRUE	TRUE	TRUE	2500	GC305A-02	TRUE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+2500Text	2500 Text Messages	2500 Text Messages	8	TRUE	TRUE	TRUE	2500	GC305A-02	TRUE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+2500Text	2500 Text Messages	2500 Text Messages	8	TRUE	TRUE	TRUE	2500	GC316A-02	FALSE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+2500Text	2500 Text Messages	2500 Text Messages	8	TRUE	TRUE	TRUE	2500	GC316A-02	FALSE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+300Text	300 Text Messages	300 Text Messages	8	TRUE	TRUE	TRUE	300	GC304A-02	TRUE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+300Text	300 Text Messages	300 Text Messages	8	TRUE	TRUE	TRUE	300	GC304A-02	TRUE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+300Text	300 Text Messages	300 Text Messages	8	TRUE	TRUE	TRUE	300	GC313A-02	FALSE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+300Text	300 Text Messages	300 Text Messages	8	TRUE	TRUE	TRUE	300	GC313A-02	FALSE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+700Text	700 Text Messages	700 Text Messages	8	TRUE	TRUE	TRUE	700	GC302A-02	TRUE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+700Text	700 Text Messages	700 Text Messages	8	TRUE	TRUE	TRUE	700	GC302A-02	TRUE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+700Text	700 Text Messages	700 Text Messages	8	TRUE	TRUE	TRUE	700	GC314A-02	FALSE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+700Text	700 Text Messages	700 Text Messages	8	TRUE	TRUE	TRUE	700	GC314A-02	FALSE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	1250Text	GC303A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	1250Text	GC315A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	2500Text	GC305A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	2500Text	GC316A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	300Text	GC304A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	300Text	GC313A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	700Text	GC302A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	GC318A-02	FALSE	700Text	GC314A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	10CentText	GC320A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	10CentText	SIMTXT10CENTS2	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	1250Text	GC303A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	1250Text	GC315A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	2500Text	GC305A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	2500Text	GC316A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	300Text	GC304A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	300Text	GC313A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	700Text	GC302A-02	NULL	NULL	Text	TRUE	NULL
+UnlimitedText	Unlimited Text Messages	Unlimited Text Messages	8	TRUE	TRUE	TRUE	Unlimited	SIMTXTFREE2	TRUE	700Text	GC314A-02	NULL	NULL	Text	TRUE	NULL

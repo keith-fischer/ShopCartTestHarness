@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using ShopCartTestHarness.CartService;
-using ShopCartTestHarness.CostGuardService;
+//using ShopCartTestHarness.
+//using ShopCartTestHarness.CostGuardService;
 using GreatCall.ShoppingCart.Contracts;
 namespace ShopCartTestHarness
 {

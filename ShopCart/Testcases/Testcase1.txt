@@ -1,0 +1,20 @@
+﻿Qty	 Sku	ProdType	 Description	ProductID
++	GC001A-W-RUBY	Device	Jitterbug Plus Red	JitterbugPlusRed
++	GC504A	Plan	Basic 14 - Monthly
++	AOMIN1000	Feature	1000 Add-On Minutes
++	GC304A-02	Text	300 Text Messages
++	GC308A-02	Data	Data: Extra - 100 MB
++	GC400A	Accessory	Car Charger
++	LeatherCaseHorizontl	Accessory	Jitterbug Plus Leather Case
++	GC402A	Accessory	Jitterbug Plus Battery
+-	GC400A	Accessory	Car Charger
++	GC403A	Accessory	Jitterbug Plus AC Charger
++	Lanyard-Red	Accessory	Red Beaded Lanyard
++	CHECKINCALL	Vas	Check-in calls
++	DAILYTIP	Vas	Daily Health Tips
++	GC300A-02	Vas	My Photos
++	GC317A-02	Vas	Handset Replacement Option
++	VM12	Vas	VoiceMail
++	WELLNESSCALL	Vas	Wellness Call
++	Ship-Standard	Shipping	Standard Shipping
+

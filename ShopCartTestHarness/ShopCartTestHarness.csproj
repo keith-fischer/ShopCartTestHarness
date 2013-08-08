@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74FE28B7-66E0-4E6F-9E48-A16318C51DD1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopCartTestHarness</RootNamespace>
+    <AssemblyName>ShopCartTestHarness</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ShopCartTestHarness.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GreatCall.ShoppingCart.Contracts">
+      <HintPath>..\packages\GreatCall.ShoppingCart.Contracts.1.0.0.23\lib\net35\GreatCall.ShoppingCart.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CartService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CostGuardService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\CartService\CartService.wsdl" />
+    <None Include="Service References\CartService\CartService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CartService\CartService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CartService\CartService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CartService\CartService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CartService\ShopCartTestHarness.CartService.Cart.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CartService\ShopCartTestHarness.CartService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\CostGuard.wsdl" />
+    <None Include="Service References\CostGuardService\CostGuard.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CostGuardService\CostGuard1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CostGuardService\CostGuard2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CostGuardService\CostGuard3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CostGuardService\CostGuard4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CostGuardService\CostGuard5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.ActiveSubsBySKUResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.AddContactResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.Address.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CostGuardChangeReason.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CostGuardContact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CostGuardContactSearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CostGuardCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CostGuardCustomerBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CostGuardInvoice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CostGuardProduct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CustomerBalance.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.CustomerBalanceBucket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.DeviceSearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.EpayAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.EpayTransaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.FollowUp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.Journal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.NetworkCoverageCheckResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.OrderSubmitResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.RetailReservationInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.SalesEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.ServiceFeatures.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.ServiceSearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.SubmitPaymentResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.Transaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.UsageSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.ValueAddedService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.WirelessUsage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CostGuardService\ShopCartTestHarness.CostGuardService.WirelessUsageDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CartService\" />
+    <WCFMetadataStorage Include="Service References\CostGuardService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CartService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CartService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CartService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CostGuardService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CostGuardService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CostGuardService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="notes.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

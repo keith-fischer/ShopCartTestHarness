@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProductCatalogModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ProductCatalogModelStoreContainer">
+          <EntitySet Name="Product" EntityType="ProductCatalogModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductBundle" EntityType="ProductCatalogModel.Store.ProductBundle" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductSku" EntityType="ProductCatalogModel.Store.ProductSku" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductSkuRule" EntityType="ProductCatalogModel.Store.ProductSkuRule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductType" EntityType="ProductCatalogModel.Store.ProductType" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Product_ProductTypeId" Association="ProductCatalogModel.Store.FK_Product_ProductTypeId">
+            <End Role="ProductType" EntitySet="ProductType" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSku_ProductId" Association="ProductCatalogModel.Store.FK_ProductSku_ProductId">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductSku" EntitySet="ProductSku" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ProductTypeId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Visible" Type="bit" Nullable="false" />
+          <Property Name="Removable" Type="bit" Nullable="false" />
+          <Property Name="ShortName" Type="nvarchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="ProductBundle">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="IncludedProductId" />
+          </Key>
+          <Property Name="ProductId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IncludedProductId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IncludedSku" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProductSku">
+          <Key>
+            <PropertyRef Name="Sku" />
+          </Key>
+          <Property Name="ProductId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sku" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductSkuRule">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="InvalidProductId" />
+            <PropertyRef Name="InvalidSku" />
+          </Key>
+          <Property Name="ProductId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="InvalidProductId" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="InvalidSku" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ReplacementProductId" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReplacementSku" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProductType">
+          <Key>
+            <PropertyRef Name="ProductTypeId" />
+          </Key>
+          <Property Name="ProductTypeId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaxQuantityPerProduct" Type="int" />
+          <Property Name="CanOnlyHaveOneProductPerType" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Product_ProductTypeId">
+          <End Role="ProductType" Type="ProductCatalogModel.Store.ProductType" Multiplicity="1" />
+          <End Role="Product" Type="ProductCatalogModel.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductType">
+              <PropertyRef Name="ProductTypeId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSku_ProductId">
+          <End Role="Product" Type="ProductCatalogModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductSku" Type="ProductCatalogModel.Store.ProductSku" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="ProductSku">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProductCatalogModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ProductCatalogEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="ProductCatalogModel.Product" />
+          <EntitySet Name="ProductBundles" EntityType="ProductCatalogModel.ProductBundle" />
+          <EntitySet Name="ProductSkus" EntityType="ProductCatalogModel.ProductSku" />
+          <EntitySet Name="ProductSkuRules" EntityType="ProductCatalogModel.ProductSkuRule" />
+          <EntitySet Name="ProductTypes" EntityType="ProductCatalogModel.ProductType" />
+          <AssociationSet Name="FK_Product_ProductTypeId" Association="ProductCatalogModel.FK_Product_ProductTypeId">
+            <End Role="ProductType" EntitySet="ProductTypes" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSku_ProductId" Association="ProductCatalogModel.FK_ProductSku_ProductId">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductSku" EntitySet="ProductSkus" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ProductTypeId" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="Visible" Type="Boolean" Nullable="false" />
+          <Property Name="Removable" Type="Boolean" Nullable="false" />
+          <Property Name="ShortName" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ProductType" Relationship="ProductCatalogModel.FK_Product_ProductTypeId" FromRole="Product" ToRole="ProductType" />
+          <NavigationProperty Name="ProductSkus" Relationship="ProductCatalogModel.FK_ProductSku_ProductId" FromRole="Product" ToRole="ProductSku" />
+        </EntityType>
+        <EntityType Name="ProductBundle">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="IncludedProductId" />
+          </Key>
+          <Property Name="ProductId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IncludedProductId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IncludedSku" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ProductSku">
+          <Key>
+            <PropertyRef Name="Sku" />
+          </Key>
+          <Property Name="ProductId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sku" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="ProductCatalogModel.FK_ProductSku_ProductId" FromRole="ProductSku" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="ProductSkuRule">
+          <Key>
+            <PropertyRef Name="ProductId" />
+            <PropertyRef Name="InvalidProductId" />
+            <PropertyRef Name="InvalidSku" />
+          </Key>
+          <Property Name="ProductId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="InvalidProductId" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="InvalidSku" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReplacementProductId" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReplacementSku" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ProductType">
+          <Key>
+            <PropertyRef Name="ProductTypeId" />
+          </Key>
+          <Property Name="ProductTypeId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaxQuantityPerProduct" Type="Int32" />
+          <Property Name="CanOnlyHaveOneProductPerType" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="ProductCatalogModel.FK_Product_ProductTypeId" FromRole="ProductType" ToRole="Product" />
+        </EntityType>
+        <Association Name="FK_Product_ProductTypeId">
+          <End Role="ProductType" Type="ProductCatalogModel.ProductType" Multiplicity="1" />
+          <End Role="Product" Type="ProductCatalogModel.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductType">
+              <PropertyRef Name="ProductTypeId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSku_ProductId">
+          <End Role="Product" Type="ProductCatalogModel.Product" Multiplicity="1" />
+          <End Role="ProductSku" Type="ProductCatalogModel.ProductSku" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="ProductSku">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProductCatalogModelStoreContainer" CdmEntityContainer="ProductCatalogEntities">
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="ProductCatalogModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Removable" ColumnName="Removable" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductBundles">
+            <EntityTypeMapping TypeName="ProductCatalogModel.ProductBundle">
+              <MappingFragment StoreEntitySet="ProductBundle">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="IncludedProductId" ColumnName="IncludedProductId" />
+                <ScalarProperty Name="IncludedSku" ColumnName="IncludedSku" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSkus">
+            <EntityTypeMapping TypeName="ProductCatalogModel.ProductSku">
+              <MappingFragment StoreEntitySet="ProductSku">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Sku" ColumnName="Sku" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSkuRules">
+            <EntityTypeMapping TypeName="ProductCatalogModel.ProductSkuRule">
+              <MappingFragment StoreEntitySet="ProductSkuRule">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="InvalidProductId" ColumnName="InvalidProductId" />
+                <ScalarProperty Name="InvalidSku" ColumnName="InvalidSku" />
+                <ScalarProperty Name="ReplacementProductId" ColumnName="ReplacementProductId" />
+                <ScalarProperty Name="ReplacementSku" ColumnName="ReplacementSku" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductTypes">
+            <EntityTypeMapping TypeName="ProductCatalogModel.ProductType">
+              <MappingFragment StoreEntitySet="ProductType">
+                <ScalarProperty Name="ProductTypeId" ColumnName="ProductTypeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MaxQuantityPerProduct" ColumnName="MaxQuantityPerProduct" />
+                <ScalarProperty Name="CanOnlyHaveOneProductPerType" ColumnName="CanOnlyHaveOneProductPerType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ProductCatalog">
+        <EntityTypeShape EntityType="ProductCatalogModel.Product" Width="1.5" PointX="3" PointY="1" Height="2.5783902994791656" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductCatalogModel.ProductBundle" Width="1.5" PointX="0.75" PointY="4.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductCatalogModel.ProductSku" Width="1.5" PointX="5.25" PointY="1.5" Height="1.5923063151041665" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductCatalogModel.ProductSkuRule" Width="1.5" PointX="2.75" PointY="4.75" Height="1.7566536458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductCatalogModel.ProductType" Width="1.5" PointX="0.75" PointY="1.375" Height="1.7566536458333335" IsExpanded="true" />
+        <AssociationConnector Association="ProductCatalogModel.FK_Product_ProductTypeId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.2533268229166667" />
+          <ConnectorPoint PointX="3" PointY="2.2533268229166667" />
+        </AssociationConnector>
+        <AssociationConnector Association="ProductCatalogModel.FK_ProductSku_ProductId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.2961531575520833" />
+          <ConnectorPoint PointX="5.25" PointY="2.2961531575520833" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" />
+  <xs:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/GreatCall.Common.Types" />
+  <xs:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/GreatCall.Common" />
+  <xs:import schemaLocation="http://gcdmdevtest01.jitterbug.local:8008/CostGuard2/CostGuard.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="ValidateCardTypeAndNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreditCardType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strErrors" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateCardTypeAndNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateCardTypeAndNumberResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="strErrors" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBilledMinuteDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceNumber" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBilledMinuteDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetBilledMinuteDetailsResult" nillable="true" type="q1:ArrayOfWirelessUsage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEpayAccounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="filter" type="q2:EpayAccountTypeFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEpayAccountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetEpayAccountsResult" nillable="true" type="q3:ArrayOfEpayAccount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEpayTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransactionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEpayTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetEpayTransactionResult" nillable="true" type="q4:EpayTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvoiceNumber" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="DocumentType" type="q5:CGDocumentType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInvoiceResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoiceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+        <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvoiceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetInvoiceListResult" nillable="true" type="q6:ArrayOfCostGuardInvoice" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextBillingDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextBillingDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNextBillingDateResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesEntities">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalesEntitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetSalesEntitiesResult" nillable="true" type="q7:ArrayOfSalesEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServiceFeaturesGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServiceFeaturesGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="ServiceFeaturesGetResult" nillable="true" type="q8:ServiceFeatures" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceFeatures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDN" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceFeaturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetServiceFeaturesResult" nillable="true" type="q9:ServiceFeatures" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnbilledMinuteDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+        <xs:element minOccurs="0" name="ServiceID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnbilledMinuteDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetUnbilledMinuteDetailsResult" nillable="true" type="q10:ArrayOfWirelessUsage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnbilledMinuteSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+        <xs:element minOccurs="0" name="ServiceID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnbilledMinuteSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetUnbilledMinuteSummaryResult" nillable="true" type="q11:WirelessUsageDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueAddedServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+        <xs:element minOccurs="0" name="ServiceID" type="xs:int" />
+        <xs:element minOccurs="0" name="disconnected" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueAddedServicesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetValueAddedServicesResult" nillable="true" type="q12:ArrayOfValueAddedService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueAddedServicesWithCustomerID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValueAddedServicesWithCustomerIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetValueAddedServicesWithCustomerIDResult" nillable="true" type="q13:ArrayOfValueAddedService" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/GreatCall.Common.Types" minOccurs="0" name="type" type="q14:CGJournalSearchTypes" />
+        <xs:element minOccurs="0" name="from" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="to" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="JournalSearchResult" nillable="true" type="q15:ArrayOfJournal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalSearchByJournalID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JournalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="JournalSearchByJournalIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="JournalSearchByJournalIDResult" nillable="true" type="q16:Journal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="LoadCustomerResult" nillable="true" type="q17:CostGuardCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NetworkCoverageCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zipCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NetworkCoverageCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="NetworkCoverageCheckResult" nillable="true" type="q18:NetworkCoverageCheckResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PhoneBookRefresh">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ServiceID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PhoneBookRefreshResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterDeviceAsRetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="meid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterDeviceAsRetailResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveSubscription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="Sku" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveSubscriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="RemoveSubscriptionResult" type="q19:OrderSubmitResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetailReservationCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HandsetSerial" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetailReservationCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/GreatCall.Common" minOccurs="0" name="RetailReservationCheckResult" nillable="true" type="q20:RetailReservationInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServiceSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="param" nillable="true" type="q21:ServiceSearchParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ServiceSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="ServiceSearchResult" nillable="true" type="q22:ArrayOfServiceSearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetBillingGroupIdIfPresent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="customer" nillable="true" type="q23:CostGuardPotentialCustomer" />
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetBillingGroupIdIfPresentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEpayAccountToAutoPay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+        <xs:element minOccurs="0" name="EpayAccountId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetEpayAccountToAutoPayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetEpayAccountToAutoPayResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUpOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="MEID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ZIP" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="skus" nillable="true" type="q24:ArrayOfOrderSKU" />
+        <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+        <xs:element minOccurs="0" name="LOSItemID" type="xs:int" />
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="HandsetCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="SourceCodeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetUpOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetUpOrderResult" type="xs:decimal" />
+        <xs:element minOccurs="0" name="OrderID" type="xs:int" />
+        <xs:element minOccurs="0" name="LOSItemID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="param" nillable="true" type="q25:SubmitPaymentParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="SubmitPaymentResult" nillable="true" type="q26:SubmitPaymentResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TenderOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="OrderTxnId" type="xs:int" />
+        <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="ccDetail" nillable="true" type="q27:CustomerCreditCardDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TenderOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TenderOrderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnbilledUsageSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="serviceId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnbilledUsageSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="UnbilledUsageSummaryResult" nillable="true" type="q28:UsageSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnbindContactFromMeid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="meid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnbindContactFromMeidResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="customer" nillable="true" type="q29:CostGuardCustomerBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCustomerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="addressToValidate" nillable="true" type="q30:Address" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="addressType" type="q31:CustomerAddress_Type" />
+        <xs:element minOccurs="0" name="isValid" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="ValidateAddressResult" nillable="true" type="q32:Address" />
+        <xs:element minOccurs="0" name="isValid" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivateAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="customerBillable" nillable="true" type="q33:CostGuardCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivateAccountResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActiveSubsBySKUWithVas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FeatureGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Sku" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActiveSubsBySKUWithVasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="ActiveSubsBySKUWithVasResult" nillable="true" type="q34:ArrayOfActiveSubsBySKUResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="contact" nillable="true" type="q35:CostGuardContact" />
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="AddContactResult" nillable="true" type="q36:AddContactResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCustomerProspect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="prospect" nillable="true" type="q37:CostGuardPotentialCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCustomerProspectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddCustomerProspectResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEpayAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="param" nillable="true" type="q38:AddEpayAccountParams" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEpayAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddEpayAccountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFollowUp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="followUp" nillable="true" type="q39:FollowUp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFollowUpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddFollowUpResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJournal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="journal" nillable="true" type="q40:Journal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddJournalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddJournalResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSubscription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="sku" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSubscriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="AddSubscriptionResult" type="q41:OrderSubmitResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLineOfService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="provisionSku" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="skus" nillable="true" type="q42:ArrayOfOrderSKU" />
+        <xs:element minOccurs="0" name="homePhone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="middleInitial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="street1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="street2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zipCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="meid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLineOfServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="AddLineOfServiceResult" type="q43:OrderSubmitResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddValueAddedServiceAndRemoveOtherVAS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="serviceId" type="xs:int" />
+        <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="AddCatalogIds" nillable="true" type="q44:ArrayOfint" />
+        <xs:element xmlns:q45="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RemoveCatalogIds" nillable="true" type="q45:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddValueAddedServiceAndRemoveOtherVASResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddValueAddedServiceAndRemoveOtherVASResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddValueAddedService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerId" type="xs:int" />
+        <xs:element minOccurs="0" name="serviceId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddValueAddedServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddValueAddedServiceResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContactSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="ContactSearchResult" nillable="true" type="q46:ArrayOfCostGuardContactSearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertCustomerType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="CustomerType" type="q47:CostGuardCustomerType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConvertCustomerTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="ConvertCustomerTypeResult" nillable="true" type="q48:CostGuardCustomerBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIHasAccountPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIHasAccountPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CPNIHasAccountPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIHasAuthorizedUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIHasAuthorizedUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CPNIHasAuthorizedUserPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIValidateAccountPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIValidateAccountPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CPNIValidateAccountPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIValidateAuthorizedUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accountNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CPNIValidateAuthorizedUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CPNIValidateAuthorizedUserPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeActivateAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="customerBillable" nillable="true" type="q49:CostGuardCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeActivateAccountResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeviceSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="param" nillable="true" type="q50:DeviceSearchParam" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeviceSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="DeviceSearchResult" nillable="true" type="q51:ArrayOfDeviceSearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisableEpayAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+        <xs:element minOccurs="0" name="EpayAccountId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisableEpayAccountResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisconnectLineOfService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="meid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisconnectLineOfServiceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FixAllTelBadZip">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nxx" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="npa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orderTxnId" type="xs:int" />
+        <xs:element minOccurs="0" name="LOSItemId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FixAllTelBadZipResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LOSItemId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FollowUpSearchByCustomerID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+        <xs:element minOccurs="0" name="AssignTo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReturnOnlyOpenFollowups" type="xs:boolean" />
+        <xs:element minOccurs="0" name="from" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="to" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FollowUpSearchByCustomerIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="FollowUpSearchByCustomerIDResult" nillable="true" type="q52:ArrayOfFollowUp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FollowUpSearchByJournalID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JournalID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FollowUpSearchByJournalIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="FollowUpSearchByJournalIDResult" nillable="true" type="q53:FollowUp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProducts">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetAllProductsResult" nillable="true" type="q54:ArrayOfCostGuardProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountBalanceBuckets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountBalanceBucketsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetAccountBalanceBucketsResult" nillable="true" type="q55:ArrayOfCustomerBalanceBucket" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountBalanceOverdue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountBalanceOverdueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAccountBalanceOverdueResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountBalanceSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountBalanceSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetAccountBalanceSummaryResult" nillable="true" type="q56:CustomerBalance" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetAccountTransactionsResult" nillable="true" type="q57:ArrayOfTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChangeReasons">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChangeReasonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/GreatCall.Common" minOccurs="0" name="GetChangeReasonsResult" nillable="true" type="q58:ArrayOfCostGuardChangeReason" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactAssociatedWithDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="meid" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactAssociatedWithDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetContactAssociatedWithDeviceResult" nillable="true" type="q59:CostGuardContact" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/GreatCall.CostGuard.WCFService.DataContracts" minOccurs="0" name="GetCustomerResult" nillable="true" type="q60:CostGuardCustomerBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

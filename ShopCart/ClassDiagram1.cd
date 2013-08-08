@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Test.ShopCart.ProductCatalogMgr">
+    <Position X="4" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAABAAIQAAAAIAEAAACAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>ProductCatalogMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShopCart.Settings1">
+    <Position X="7" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAEAAQAAAAAAAIEAAAAJAAAAgCBAAAAAAAAAACACAA=</HashCode>
+      <FileName>Settings1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShopCart.ShopCart">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAEABAAAAAAQAAAAEAEAAAAAAAAE=</HashCode>
+      <FileName>ShopCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShopCart.TestCaseMgr">
+    <Position X="4" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAQIAAAAACAEAAAAAAAAAAAAAQACDAAA=</HashCode>
+      <FileName>TestCaseMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShopCart.TestResults">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Test.ShopCart.TestResults.TestResultType">
+        <TypeIdentifier>
+          <NewMemberFileName>TestResults.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QACAAAAAAAAAAAEQAIAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>TestResults.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test.ShopCart.Utility">
+    <Position X="12.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShopCart.NewDataSet">
+    <Position X="15" Y="1" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ShopCart.NewDataSet.ProductSkuRuleRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductTypeRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="ShopCart.NewDataSet.ProductSkuRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Delegate Name="ShopCart.NewDataSet.ProductTypeRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="ShopCart.NewDataSet.ProductSkuRuleDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductSkuRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductTypeDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductSkuRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductBundleRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductTypeRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductSkuDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="ShopCart.NewDataSet.ProductRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="ShopCart.NewDataSet.ProductSkuRuleRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductBundleDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="ShopCart.NewDataSet.ProductSkuRuleRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="ShopCart.NewDataSet.ProductDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="ShopCart.NewDataSet.ProductBundleRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Delegate Name="ShopCart.NewDataSet.ProductBundleRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACQQAQAwAAAAJApAAgQAAAAAgCQBoAAQAINAEABhg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShopCart.ServiceReferenceCartService.CartServiceClient" BaseTypeListCollapsed="true">
+    <Position X="7" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAABAAAACAABAEAAAAAAAAAAAAAACFAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceCartService\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="ShopCart.ServiceReferenceCartService.ICartService">
+    <Position X="10" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAABAAAACAABAEAAAAAAAAAAAAAACFAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceCartService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ShopCart.ServiceReferenceCartService.ICartServiceChannel">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReferenceCartService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

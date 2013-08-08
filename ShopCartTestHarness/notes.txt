@@ -1,0 +1,55 @@
+﻿Keith,
+
+The new nuget package is GreatCall.ShoppingCart.Contracts.  This will download the interface and classes needed for the service.  You can use CartServiceClient() to create a channel factory and then create channels that implement ICartService.
+
+cartService = new CartServiceClient("CartService").ChannelFactory.CreateChannel();
+
+The general flow is:
+var cartId = cartService.CreateCart()
+foreach(itemToAdd)
+            var updatedCart = cartService.UpdateCart(new CartUpdateRequest() {
+                CartId = cartId,
+                GroupId = groupId,
+                ProductId = ,
+                NewQuantity = 1
+            });
+
+Update cart will return the cart as will calling cartService.GetCart(cartId);
+
+This service is running on dev6 and the configuration is:
+<system.serviceModel>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="UnsecuredBinding" sendTimeout="00:02:00" maxReceivedMessageSize="2147483647" maxBufferPoolSize="2147483647">
+          <security mode="None">
+            <message establishSecurityContext="false" />
+            <transport clientCredentialType="None" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint name="CartService" address="http://gcdmdevtest01:8008/CartService/CartService.svc" binding="wsHttpBinding" contract="GreatCall.ShoppingCart.Contracts.Services.ICartService" bindingConfiguration="UnsecuredBinding" />
+      <endpoint name="CostGuardService" address="http://gcdmdevtest01:8008/CostGuard2/CostGuard.svc" binding="wsHttpBinding" contract="GreatCall.CostGuard.WCFService.DataContracts.ICostGuard" bindingConfiguration="UnsecuredBinding" />
+    </client>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="HttpDebugBehavior">
+          <dataContractSerializer maxItemsInObjectGraph="2147483647" />
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="true" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+
+Thanks,
+Hank Greenberg | Software Architect
+phone | 858.720.7384 mobile | 412.512.7717
+10935 Vista Sorrento Pkwy, Suite 200 | San Diego, CA 92130
+ 
+				
+	
+						
+
+

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" />
+  <xs:import schemaLocation="http://gcdmdevtest01:8008/CartService/CartService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="CreateCart">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateCartResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cartId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="GetCartResult" nillable="true" type="q1:Cart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="update" nillable="true" type="q2:CartUpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="UpdateCartResult" nillable="true" type="q3:Cart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCartWithCartUpdateRequestList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="update" nillable="true" type="q4:ArrayOfCartUpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCartWithCartUpdateRequestListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="UpdateCartWithCartUpdateRequestListResult" nillable="true" type="q5:Cart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="cart" nillable="true" type="q6:Cart" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveCartResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductForCart">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cartId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="productId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductForCartResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="GetProductForCartResult" nillable="true" type="q7:Product" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="GetProductResult" nillable="true" type="q8:Product" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderedProductsByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="productIDs" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderedProductsByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="GetOrderedProductsByIDResult" nillable="true" type="q10:ArrayOfProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cartId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="groupId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="type" type="q11:ProductType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductsByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/GreatCall.ShoppingCart.Contracts" minOccurs="0" name="GetProductsByTypeResult" nillable="true" type="q12:ArrayOfProduct" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
